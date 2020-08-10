@@ -9,6 +9,9 @@
     </description>
     <modules>
         <module>mini-rpc-common</module>
+        <module>mini-rpc-provider</module>
+        <module>mini-rpc-consumer</module>
+        <module>mini-rpc-codec</module>
     </modules>
     <groupId>com.netty.leforee.rpc</groupId>
     <artifactId>mini-rpc</artifactId>

@@ -9,9 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mini-rpc-common</artifactId>
+    <artifactId>mini-rpc-codec</artifactId>
 
-    <dependencies></dependencies>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>com.netty.leforee.rpc</groupId>
+            <artifactId>mini-rpc-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
