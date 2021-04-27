@@ -11,7 +11,7 @@ public class ClientChanelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 2000; i++) {
             TransferMessage<Request> transferMessage = new TransferMessage<>();
             transferMessage.setMessageType(MessageType.CONTENT_MESSAGE);
             Request request = new Request();

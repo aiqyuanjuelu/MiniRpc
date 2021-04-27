@@ -15,5 +15,5 @@ final public class Constant {
     //最小字段长度
     public static final short MIN_MESSAGE_LENGTH = 8 * 2 + 3 * 2 + 2 * 2 + 4;
     //最大字段长度
-    public static final short MAX_MESSAGE_LENGTH = 2048;
+    public static final int MAX_MESSAGE_LENGTH = 2048*100;
 }

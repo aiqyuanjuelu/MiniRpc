@@ -22,9 +22,9 @@ public class TransferMessageDecoder extends ByteToMessageDecoder {
             if (in.readableBytes() < Constant.MIN_MESSAGE_LENGTH) {
                 return;
             }
-            if (in.readableBytes() > Constant.MAX_MESSAGE_LENGTH) {
+            if (in.readableBytes() >= Constant.MAX_MESSAGE_LENGTH) {
                 in.skipBytes(Constant.MAX_MESSAGE_LENGTH);
-                //in.discardReadBytes();
+                in.discardReadBytes();
                 return;
             }
             in.markReaderIndex();//记录包头位置
