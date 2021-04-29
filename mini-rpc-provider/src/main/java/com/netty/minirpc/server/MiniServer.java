@@ -3,6 +3,7 @@ package com.netty.minirpc.server;
 import com.netty.minirpc.decode.TransferMessageDecoder;
 import com.netty.minirpc.encoder.TransferMessageEncoder;
 import com.netty.minirpc.entity.Server;
+import com.netty.minirpc.entity.base.ChannelHandler;
 import com.netty.minirpc.handler.ServerChanelHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -24,7 +25,6 @@ public class MiniServer implements Server {
     }
 
     public void createServer(String host, int port) throws InterruptedException {
-
         if (bossGroup == null && workerGroup == null) {
             bossGroup = new NioEventLoopGroup();
             workerGroup = new NioEventLoopGroup();
@@ -47,5 +47,30 @@ public class MiniServer implements Server {
             ChannelFuture future = bootstrap.bind(host, port).sync();
             future.channel().closeFuture().sync();
         }
+    }
+
+    @Override
+    public int start() {
+        return 0;
+    }
+
+    @Override
+    public int stop() {
+        return 0;
+    }
+
+    @Override
+    public int init() {
+        return 0;
+    }
+
+    @Override
+    public int getStatus() {
+        return 0;
+    }
+
+    @Override
+    public ChannelHandler getChannelHandler() {
+        return null;
     }
 }

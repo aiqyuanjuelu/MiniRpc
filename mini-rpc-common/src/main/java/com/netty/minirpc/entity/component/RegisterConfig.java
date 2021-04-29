@@ -1,4 +1,4 @@
-package com.netty.minirpc.entity.bean;
+package com.netty.minirpc.entity.component;
 
 import com.netty.minirpc.entity.base.Entity;
 

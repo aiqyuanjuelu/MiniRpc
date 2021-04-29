@@ -44,4 +44,13 @@ public class Request implements Message {
     public int getLength() {
         return SerializationUtil.serialize(this).length;
     }
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "requestId=" + requestId +
+                ", attachments=" + attachments +
+                ", message=" + message +
+                '}';
+    }
 }
